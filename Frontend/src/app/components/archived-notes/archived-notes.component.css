@@ -1,0 +1,9 @@
+.far{
+    cursor: pointer;
+}
+
+.pos{
+    position: absolute;
+    bottom: 20%;
+    right: 30%;
+}

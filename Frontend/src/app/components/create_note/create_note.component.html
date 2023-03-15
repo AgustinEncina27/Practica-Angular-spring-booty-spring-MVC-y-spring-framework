@@ -1,0 +1,23 @@
+<div class="container mt-5 letra">
+    <nav class="navbar navbar-expand-lg " style="text-align:left;">
+        <div class="container-fluid">
+            <a class=" navbar-brand col align-self-end" style="font-size: 80px;">{{titulo}}</a>
+        </div>
+    </nav>
+</div>
+<form [formGroup]="form" (ngSubmit)="addNote()">
+    <div class="container mt-2 letra">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Title</label>
+            <input formControlName="title" style="width: 20%;" type="email" class="form-control" id="exampleFormControlInput1" >
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Content</label>
+            <textarea formControlName="content" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div style="text-align: right;" class="mb-3">
+            <button style="margin: 5px" type="button" class="btn btn-dark  col align-self-end" routerLink="/Note" >Cancel</button>
+            <button type="submit" [disabled]="this.form.invalid" class="btn btn-dark  col align-self-end" >Save</button>
+        </div>
+    </div>
+</form>
