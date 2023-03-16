@@ -48,7 +48,7 @@ public class NoteController {
         return new ResponseEntity<>(serviceResponse, HttpStatus.OK);
     }
 
-    @PostMapping("/delete")
+    @DeleteMapping("/delete")
     public ResponseEntity<ServiceResponse> delete(@RequestBody Note note){
         ServiceResponse serviceResponse= new ServiceResponse();
         int result= iNoteService.delete(note.getId());
